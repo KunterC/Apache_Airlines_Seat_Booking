@@ -124,9 +124,9 @@ class SeatBookingApp: # a class for the GUI and base functionalities
 
     def confirm_booking(self):
         #asks the user for their information when a booking is confirmed
-        passport = simpledialog.askstring("Passenger Info", "Enter Passport Number:") 
-        first_name = simpledialog.askstring("Passenger Info", "Enter First Name:")
-        last_name = simpledialog.askstring("Passenger Info", "Enter Last Name:")
+        passport = simpledialog.askstring("Passenger Info", "Enter Passport Number:", parent=self.root) 
+        first_name = simpledialog.askstring("Passenger Info", "Enter First Name:", parent=self.root)
+        last_name = simpledialog.askstring("Passenger Info", "Enter Last Name:", parent=self.root)
     
         if not self.selected_seats: #if no seats are selected an error is shown
             messagebox.showwarning("No Selection", "Please select at least one seat to book.")
@@ -153,9 +153,9 @@ class SeatBookingApp: # a class for the GUI and base functionalities
         messagebox.showinfo("Booking Success", "Seats booked successfully!") #success message is shown
 
     def confirm_freeing(self):
-        passport = simpledialog.askstring("Passenger Info", "Enter Passport Number:") #asks the user for their info 
-        first_name = simpledialog.askstring("Passenger Info", "Enter First Name:")
-        last_name = simpledialog.askstring("Passenger Info", "Enter Last Name:")
+        passport = simpledialog.askstring("Passenger Info", "Enter Passport Number:", parent=self.root) #asks the user for their info 
+        first_name = simpledialog.askstring("Passenger Info", "Enter First Name:", parent=self.root)
+        last_name = simpledialog.askstring("Passenger Info", "Enter Last Name:", parent=self.root)
     
         if not self.selected_seats: #if no seat is selected error is shown
             messagebox.showwarning("No Selection", "Please select a seat to free.")
